@@ -92,3 +92,47 @@ describe('Testing Arithmetique Calculator ', function () {
   })
 
 })
+
+
+describe('Testing Scientifique Calculator ', function () {
+  it('Verify type of values/caracts', function (done) {
+    let calc1 = new Calculator(1, 'p', 3)
+    let calc2 = new Calculator(1, 'r')
+    expect(calc1.verifyValue()).to.equal(true)
+    expect(calc2.verifyValue()).to.equal(true)
+    done()
+  })
+  it('Verify type of values/caracts with error', function (done) {
+    let calc1 = new Calculator(1, 'p')
+    let calc2 = new Calculator(1, 'r', 2)
+    expect(calc1.verifyValue()).to.equal(false)
+    expect(calc1.calcul()).to.equal("Error Type")
+    expect(calc2.verifyValue()).to.equal(false)
+    expect(calc2.calcul()).to.equal("Error Type")
+    done()
+  })
+
+  it('Test calcul puissance', function (done) {
+    let calc1 = new Calculator(2, 'p', 2)
+    let calc2 = new Calculator(6, 'p', -4)
+    let calc3 = new Calculator(3, 'p', 0)
+    let calc4 = new Calculator(0, 'p', 2)
+    expect(calc1.calcul()).to.equal(4)
+    expect(calc2.calcul()).to.equal(0)
+    expect(calc3.calcul()).to.equal(1)
+    expect(calc4.calcul()).to.equal(0)
+    done()
+  })
+  it('Test calcul racine carre', function (done) {
+    let calc1 = new Calculator(0, 'r')
+    let calc2 = new Calculator(4, 'r')
+    let calc3 = new Calculator(-12, 'r')
+    let calc4 = new Calculator(12, 'r')
+    expect(calc1.calcul()).to.equal(0)
+    expect(calc2.calcul()).to.equal(2)
+    expect(calc3.calcul()).to.equal("Error : cannot process negative number with square root :(")
+    expect(calc4.calcul()).to.equal(3.46)
+    done()
+  })
+
+})
