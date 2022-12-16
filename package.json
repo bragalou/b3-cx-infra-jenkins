@@ -1,0 +1,23 @@
+{
+  "name": "b3_dev_tu_borrell_melvin_valette_cyrus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/mb_epsi/mb_methodologie-de-test/b3-dev-tu-borrell-melvin-valette-cyrus.git"
+  },
+  "author": "Melvin BORRELL, Cyrus VALETTE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/mb_epsi/mb_methodologie-de-test/b3-dev-tu-borrell-melvin-valette-cyrus/issues"
+  },
+  "homepage": "https://gitlab.com/mb_epsi/mb_methodologie-de-test/b3-dev-tu-borrell-melvin-valette-cyrus#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0"
+  }
+}
